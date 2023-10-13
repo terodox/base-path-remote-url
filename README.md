@@ -1,26 +1,20 @@
-## Demo pages
+# Demo pages
 
-- /pillars - show the difference between static import of image vs referencing image
+- /pillars - show the difference between static import of image vs referencing image vs remote url
 
-## Getting Started
+## Base path
 
-First, run the development server:
+A base path of `/andy-base-path` has been configured on this repo. This means all routes must be prefixed with `/andy-base-path`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Allowed domains for remote urls
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The following domains have been allow listed for remote images:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- images.unsplash.com
+- source.unsplash.com
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This means you can load any image from those domains through the `_next/image` path by providing the image in the `url` query parameter of the request.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Example:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
+- `/andy-base-path/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1520283451192-c3b05d7db25b&w=1080&q=75`
