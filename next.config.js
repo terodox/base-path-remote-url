@@ -5,7 +5,7 @@ const nextConfig = {
   // assetPrefix: '/some-asset-prefix',
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
+    domains: ['images.unsplash.com', 'source.unsplash.com', 'main.d45dn2ti2s07n.amplifyapp.com'],
   },
 };
 
